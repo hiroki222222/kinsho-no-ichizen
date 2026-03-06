@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>金賞の一膳 発芽玄米 | よい日々ショップ 楽天市場店</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700;900&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+
+/* =====================================================
+   VARIABLES & RESET
+===================================================== */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  /* 楽天市場リアル感カラー */
+  --crimson:   #C22020;      /* 楽天赤 */
+  --crimson-dk:#9A1818;
+  --crimson-lt:#E84040;
+  --gold:      #B8860B;      /* ダークゴールド（暖かみ） */
+  --gold-lt:   #D4A520;
+  --gold-pale: #FDF5DC;
+  --brown:     #4A2C10;
+  --brown-mid: #7A5030;
+  --brown-lt:  #A07848;
+  --cream:     #FDFAF4;      /* 温かみのある白 */
+  --cream-dk:  #F5EFE0;
+  --sakura:    #FDF0F0;      /* 薄桜 */
+  --ivory:     #FAF6EE;
+  --border:    #DDD0B8;      /* 和風ボーダー */
+  --border-lt: #EDE5D5;
+  --text:      #2A1A08;
+  --text-mid:  #5C4428;
+  --text-lt:   #9A8060;
+  --red-acc:   #D42020;
+  --W: 660px;
+}
+
+body {
+  font-family:'Noto Sans JP', sans-serif;
+  background:#fff;
+  color: var(--text);
+  font-size:14px;
+  line-height:1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width:var(--W); margin:0 auto; padding:0 16px; }
+
+/* =====================================================
+   和風装飾パーツ
+===================================================== */
+
+/* 二重罫線区切り */
+.wa-border-top {
+  border-top: 3px double var(--border);
+  padding-top: 32px;
+}
+
+/* 菱形ライン */
+.diamond-line {
+  display:flex; align-items:center; justify-content:center;
+  gap:10px; margin:20px 0;
+}
+.diamond-line::before,
+.diamond-line::after {
+  content:'';
+  display:block;
+  height:1px;
+  width:80px;
+  background: linear-gradient(to right, transparent, var(--border), transparent);
+}
+.diamond-sym { color:var(--gold); font-size:11px; letter-spacing:4px; }
+
+/* 和柄ライン区切り */
+.wa-divider {
+  width:100%; max-width:var(--W); margin:0 auto;
+  height:14px; position:relative; overflow:hidden;
+}
+.wa-divider::before {
+  content:'― ◆ ― ◆ ― ◆ ― ◆ ― ◆ ― ◆ ― ◆ ― ◆ ―';
+  position:absolute; left:50%; transform:translateX(-50%);
+  font-size:9px; color:var(--border); letter-spacing:2px;
+  white-space:nowrap;
+}
+
+/* セクション帯見出し（楽天スタイル） */
+.rakuten-head {
+  background: linear-gradient(to right, var(--brown), var(--brown-mid));
+  color:#fff;
+  text-align:center;
+  padding:12px 16px;
+  position:relative;
+}
+.rakuten-head::before,
+.rakuten-head::after {
+  content:'';
+  position:absolute; top:5px; bottom:5px;
+  width:3px;
+  background: linear-gradient(to bottom, var(--gold-lt), var(--gold), var(--gold-lt));
+}
+.rakuten-head::before { left:10px; }
+.rakuten-head::after  { right:10px; }
+
+.rakuten-head-txt {
+  font-family:'Shippori Mincho', serif;
+  font-size:clamp(17px,4.5vw,24px);
+  font-weight:700;
+  letter-spacing:0.12em;
+}
+
+/* POINT ラベル（楽天風） */
+.pt-badge {
+  display:inline-flex; align-items:center; gap:6px;
+  background:var(--crimson);
+  color:#fff;
+  font-family:'Shippori Mincho', serif;
+  font-size:11px; font-weight:700;
+  padding:4px 14px 4px 10px;
+  letter-spacing:0.1em;
+  position:relative;
+  margin-bottom:10px;
+}
+.pt-badge::after {
+  content:'';
+  position:absolute; right:-9px; top:0;
+  border:14px solid transparent;
+  border-left:10px solid var(--crimson);
+  border-right:none;
+}
+.pt-badge .num {
+  font-size:18px;
+  font-weight:800;
+  line-height:1;
+  margin-right:2px;
+}
+
+.pt-headline {
+  font-family:'Shippori Mincho', serif;
+  font-size:clamp(22px,5.5vw,36px);
+  font-weight:700;
+  color:var(--text);
+  line-height:1.3;
+  letter-spacing:0.04em;
+  margin-bottom:14px;
+}
+.pt-headline .red { color:var(--crimson); }
+.pt-headline .gold { color:var(--gold); }
+
+/* 画像プレースホルダー */
+.img-box {
+  width:100%; max-width:var(--W); margin:0 auto 18px;
+  position:relative; overflow:hidden; border-radius:3px;
+}
+.img-ph {
+  width:100%; height:220px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:56px;
+}
+.iph-field  { background:linear-gradient(160deg,#6A7850,#8A9870); }
+.iph-germ   { background:linear-gradient(160deg,#506040,#708060); }
+.iph-bowl   { background:linear-gradient(160deg,#C8A880,#A88860); }
+.iph-dark   { background:linear-gradient(160deg,#382818,#5A3C1C); }
+.iph-food   { background:linear-gradient(160deg,#BCA880,#9A8860); }
+.iph-fac    { background:linear-gradient(160deg,#788090,#505868); }
+.iph-chew   { background:linear-gradient(160deg,#88A8A0,#608080); }
+
+/* 画像外枠（和風） */
+.img-wa-frame {
+  border:2px solid var(--border);
+  box-shadow: 3px 3px 0 var(--cream-dk), 4px 4px 0 var(--border);
+}
+
+/* 吹き出し（楽天スタイル） */
+.balloon {
+  background: var(--gold-pale);
+  border:2px solid var(--gold);
+  border-radius:5px;
+  padding:14px 18px;
+  position:relative;
+  margin-bottom:14px;
+}
+.balloon::before {
+  content:'';
+  position:absolute; top:-10px; left:24px;
+  border:10px solid transparent;
+  border-bottom:10px solid var(--gold);
+  border-top:none;
+}
+.balloon::after {
+  content:'';
+  position:absolute; top:-7px; left:26px;
+  border:8px solid transparent;
+  border-bottom:8px solid var(--gold-pale);
+  border-top:none;
+}
+
+/* 赤下線強調 */
+.red-u { color:var(--crimson); text-decoration:underline; text-decoration-color:rgba(194,32,32,.4); text-underline-offset:3px; }
+/* 太字強調 */
+.emph { font-weight:700; color:var(--text); }
+/* 金色強調 */
+.gold-t { color:var(--gold); font-weight:700; }
+
+/* =====================================================
+   01. HERO
+===================================================== */
+.hero {
+  background:#fff;
+  border-bottom:3px double var(--border);
+}
+
+/* 上帯：商品シリーズ名 */
+.hero-top-bar {
+  background: linear-gradient(to right, var(--brown), #6A3C14, var(--brown));
+  color:#fff;
+  text-align:center;
+  padding:8px;
+  font-family:'Shippori Mincho',serif;
+  font-size:13px;
+  letter-spacing:0.25em;
+}
+
+/* メインエリア */
+.hero-main {
+  display:flex;
+  align-items:stretch;
+  min-height:380px;
+  background:var(--cream);
+}
+
+/* 左：商品パック */
+.hero-pack-col {
+  width:46%;
+  background: linear-gradient(160deg, #2A3C18 0%, #3C5A20 50%, #2A3C18 100%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  padding:28px 16px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-pack-col::before {
+  content:'';
+  position:absolute; inset:8px;
+  border:1px solid rgba(200,160,32,.25);
+}
+
+.pack-img {
+  width:130px; height:165px;
+  background: linear-gradient(160deg, #1C3C10, #2C6018);
+  border-radius:44% 44% 38% 38% / 24% 24% 17% 17%;
+  border:2px solid rgba(200,160,32,.55);
+  box-shadow:0 8px 24px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.08);
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  position:relative; z-index:2;
+  margin-bottom:12px;
+}
+.pack-series { font-size:8px; letter-spacing:.1em; color:rgba(255,255,255,.4); margin-bottom:3px; }
+.pack-icon   { font-size:28px; margin:4px 0; }
+.pack-name   {
+  font-family:'Shippori Mincho',serif;
+  font-size:12px; font-weight:700;
+  color:rgba(218,180,60,1);
+  text-align:center; line-height:1.5;
+}
+
+.award-seal {
+  position:absolute; top:-7px; right:-7px;
+  width:54px; height:54px;
+  background: radial-gradient(circle at 40% 35%, #F0D040, #C09010);
+  border-radius:50%;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  box-shadow:0 3px 10px rgba(0,0,0,.35);
+  border:2px solid rgba(255,255,255,.25);
+  z-index:3;
+}
+.award-seal-txt {
+  font-family:'Shippori Mincho',serif;
+  font-size:8px; font-weight:700;
+  color:#3A1C00;
+  text-align:center; line-height:1.35;
+}
+.award-seal-big { font-size:14px; }
+
+.pack-sub {
+  font-family:'Noto Sans JP',serif;
+  font-size:10px; color:rgba(255,255,255,.5);
+  text-align:center; line-height:1.8;
+  position:relative; z-index:2;
+  letter-spacing:.04em;
+}
+
+/* 右：テキスト */
+.hero-text-col {
+  flex:1;
+  padding:24px 20px 24px 22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:var(--cream);
+  border-left:1px solid var(--border-lt);
+}
+
+.hero-new-tag {
+  display:inline-block;
+  background:var(--crimson);
+  color:#fff;
+  font-size:10px; font-weight:700;
+  padding:3px 12px;
+  letter-spacing:.1em;
+  margin-bottom:8px;
+}
+
+.hero-h1 {
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(32px,8vw,52px);
+  font-weight:800;
+  color:var(--text);
+  line-height:1.1;
+  letter-spacing:.04em;
+  margin-bottom:6px;
+}
+
+.hero-h1-yomi {
+  font-size:11px; color:var(--text-lt);
+  letter-spacing:.15em; margin-bottom:10px;
+}
+
+.hero-catch {
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(12px,3vw,15px);
+  color:var(--brown-mid);
+  line-height:1.9;
+  font-weight:500;
+  border-left:3px solid var(--gold);
+  padding-left:10px;
+  margin-bottom:14px;
+}
+
+.hero-price-hint {
+  font-size:11px;
+  color:var(--crimson);
+  font-weight:700;
+  letter-spacing:.03em;
+}
+
+/* 下：食卓写真 */
+.hero-food {
+  width:100%; height:240px;
+  background:linear-gradient(160deg, #B0986A, #C8B080 40%, #9A8060);
+  position:relative;
+  display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
+  border-top:2px solid var(--border);
+}
+.hero-food::after {
+  content:'';
+  position:absolute; inset:0;
+  background:linear-gradient(to bottom, rgba(40,20,8,.2) 0%, rgba(40,20,8,.0) 45%, rgba(40,20,8,.5));
+}
+.hero-food-emo { font-size:64px; position:relative; z-index:2; }
+.hero-food-caption {
+  position:absolute; bottom:0; left:0; right:0; z-index:3;
+  background:linear-gradient(to top, rgba(30,15,5,.8), transparent);
+  padding:20px 20px 14px;
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(15px,3.8vw,22px); font-weight:700;
+  color:#fff; text-align:center;
+  letter-spacing:.06em;
+  text-shadow:0 1px 6px rgba(0,0,0,.5);
+}
+
+/* =====================================================
+   02. 150万食バナー
+===================================================== */
+.milestone {
+  background: var(--ivory);
+  padding:40px 16px;
+  text-align:center;
+  border-bottom: 3px double var(--border);
+}
+
+.ms-wrap {
+  max-width:var(--W); margin:0 auto;
+  display:flex; align-items:center; justify-content:center;
+  gap:20px; flex-wrap:wrap;
+}
+
+.ms-pack {
+  width:90px; height:110px;
+  background:linear-gradient(160deg,#1C3C10,#2C6018);
+  border-radius:42% 42% 34% 34% / 22% 22% 16% 16%;
+  border:2px solid rgba(200,160,32,.5);
+  box-shadow:0 5px 14px rgba(0,0,0,.14);
+  display:flex; align-items:center; justify-content:center;
+  font-size:32px; flex-shrink:0;
+}
+
+.ms-text { text-align:center; }
+
+.ms-sub { font-size:12px; color:var(--text-lt); letter-spacing:.05em; margin-bottom:2px; }
+
+.ms-num-wrap {
+  display:flex; align-items:baseline;
+  justify-content:center; gap:2px;
+  font-family:'Shippori Mincho',serif;
+  font-weight:800; color:var(--crimson); line-height:1;
+}
+.ms-n1 { font-size:clamp(68px,16vw,100px); letter-spacing:-.02em; }
+.ms-n2 { font-size:clamp(36px,8vw,52px); }
+
+.ms-label {
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(22px,5vw,34px); font-weight:800;
+  color:var(--text); letter-spacing:.04em;
+}
+
+.ms-note { font-size:11px; color:var(--text-lt); margin-top:6px; }
+
+/* =====================================================
+   共通セクション
+===================================================== */
+.sec { padding:44px 16px; }
+.bg-cream  { background:var(--cream); }
+.bg-ivory  { background:var(--ivory); }
+.bg-white  { background:#fff; }
+.bg-sakura { background:var(--sakura); }
+.bg-brown  { background:linear-gradient(160deg,#2A1A08,#4A2C10); }
+
+/* セクション見出し（下線スタイル） */
+.sec-h {
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(18px,4.5vw,26px);
+  font-weight:700;
+  color:var(--text);
+  text-align:center;
+  line-height:1.5;
+  letter-spacing:.06em;
+  position:relative; padding-bottom:14px; margin-bottom:22px;
+}
+.sec-h::after {
+  content:'';
+  position:absolute; bottom:0; left:50%; transform:translateX(-50%);
+  width:60px; height:2px;
+  background:linear-gradient(to right, var(--gold), var(--crimson));
+}
+
+/* 本文 */
+.body-p {
+  font-size:14px; color:var(--text-mid);
+  line-height:2; max-width:var(--W); margin:0 auto;
+}
+.body-p.c { text-align:center; }
+
+/* =====================================================
+   03. SNSでも話題
+===================================================== */
+.sns-grid {
+  display:grid; grid-template-columns:1.6fr 1fr;
+  gap:10px; max-width:var(--W); margin:0 auto 10px;
+}
+.sns-card { background:#fff; border:1px solid var(--border-lt); border-radius:2px; overflow:hidden; }
+.sns-ph   { width:100%; aspect-ratio:1; display:flex; align-items:center; justify-content:center; font-size:44px; }
+.s1 { background:linear-gradient(135deg,#C8B080,#A89060); }
+.s2 { background:linear-gradient(135deg,#B8A070,#988050); }
+.s3 { background:linear-gradient(135deg,#A89070,#887050); }
+.sns-meta { padding:7px 10px; display:flex; justify-content:space-between; align-items:center; }
+.sns-user { font-size:11px; font-weight:700; color:var(--text); }
+.sns-acts { font-size:12px; color:var(--text-lt); }
+.sns-right { display:flex; flex-direction:column; gap:10px; }
+.sns-right .sns-ph { aspect-ratio:1.6; }
+.sns-disc { font-size:11px; color:var(--text-lt); max-width:var(--W); margin:0 auto; }
+
+/* =====================================================
+   04. お悩みセクション
+===================================================== */
+.trouble-h {
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(18px,4.8vw,28px); font-weight:700;
+  color:var(--text); text-align:center;
+  letter-spacing:.06em; margin-bottom:22px;
+  border-top:3px solid var(--text);
+  border-bottom:1px solid var(--text);
+  padding:8px 0;
+  display:block;
+}
+.trouble-list { max-width:var(--W); margin:0 auto; list-style:none; }
+.trouble-list li {
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(14px,3.8vw,20px); font-weight:600;
+  color:var(--text);
+  padding:10px 0 10px 20px;
+  border-bottom:1px dashed var(--border);
+  position:relative;
+  line-height:1.5;
+}
+.trouble-list li::before {
+  content:'✔';
+  color:var(--crimson); font-size:12px;
+  position:absolute; left:0; top:12px;
+}
+.trouble-list li em { font-style:normal; color:var(--crimson); font-weight:700; }
+
+.trouble-ans {
+  text-align:center;
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(14px,3.8vw,20px); font-weight:700;
+  color:var(--brown);
+  margin-top:22px; max-width:var(--W); margin-left:auto; margin-right:auto;
+  background: var(--gold-pale);
+  border:1px solid var(--gold);
+  padding:12px 20px;
+}
+
+/* =====================================================
+   POINT 共通
+===================================================== */
+.pt-sec { padding:44px 16px; }
+
+/* 専門家ボックス（楽天風） */
+.expert-row {
+  max-width:var(--W); margin:16px auto 0;
+  background:#fff;
+  border:2px solid var(--border);
+  display:flex; gap:0; overflow:hidden;
+}
+.ex-photo-col {
+  width:88px; flex-shrink:0;
+  background:linear-gradient(160deg,#485860,#303840);
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  padding:12px 6px;
+  font-size:26px; gap:6px;
+}
+.ex-photo-lbl {
+  font-size:8px; color:rgba(255,255,255,.6);
+  text-align:center; line-height:1.5;
+  border-top:1px solid rgba(255,255,255,.2);
+  padding-top:5px;
+  width:100%;
+}
+.ex-body { flex:1; padding:14px 16px; }
+.ex-cert {
+  display:inline-block;
+  background:var(--brown);
+  color:#fff; font-size:10px; font-weight:700;
+  padding:3px 10px; letter-spacing:.05em; margin-bottom:8px;
+}
+.ex-quote {
+  font-family:'Shippori Mincho',serif;
+  font-size:14px; font-weight:600;
+  color:var(--text); line-height:1.75; margin-bottom:6px;
+}
+.ex-name { font-size:11px; color:var(--text-lt); text-align:right; }
+
+/* =====================================================
+   POINT 04 古代米ブロック
+===================================================== */
+.ancient-block {
+  background:linear-gradient(155deg,#2A1A08,#4A2C10);
+  border:1px solid rgba(200,160,32,.3);
+  max-width:var(--W); margin:0 auto;
+  padding:24px 22px;
+  position:relative;
+}
+.ancient-block::before {
+  content:'';
+  position:absolute; inset:6px;
+  border:1px solid rgba(200,160,32,.15);
+  pointer-events:none;
+}
+.anc-sublabel {
+  font-size:11px; letter-spacing:.12em;
+  color:rgba(200,160,32,.75);
+  font-family:'Shippori Mincho',serif;
+  margin-bottom:10px; display:block;
+}
+.anc-title {
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(19px,4.8vw,28px); font-weight:700;
+  color:#fff; line-height:1.4; margin-bottom:10px;
+}
+.anc-body {
+  font-size:13px; color:rgba(255,255,255,.6); line-height:1.9; margin-bottom:18px;
+}
+.anc-tags { display:flex; flex-wrap:wrap; gap:7px; }
+.anc-tag {
+  border:1px solid rgba(200,160,32,.45);
+  color:rgba(255,255,255,.85);
+  font-size:12px; font-weight:700;
+  padding:4px 11px; letter-spacing:.04em;
+  background:rgba(255,255,255,.06);
+}
+
+/* =====================================================
+   POINT 05 栄養比較表
+===================================================== */
+.nutri-circles {
+  display:flex; justify-content:center; gap:12px;
+  margin-bottom:16px; flex-wrap:wrap;
+}
+.n-circle {
+  width:82px; height:82px; border-radius:50%;
+  background:var(--brown);
+  border:2px solid var(--gold);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  color:#fff; box-shadow:0 3px 10px rgba(0,0,0,.12);
+}
+.n-circle .nm { font-size:9px; color:rgba(255,255,255,.6); margin-bottom:1px; }
+.n-circle .nv { font-family:'Shippori Mincho',serif; font-size:28px; font-weight:800; color:var(--gold-lt); line-height:1; }
+.n-circle .nu { font-size:11px; color:rgba(255,255,255,.5); }
+
+.cmp-table {
+  width:100%; max-width:var(--W); margin:0 auto;
+  border-collapse:collapse;
+  border:2px solid var(--border);
+  font-size:13px;
+}
+.cmp-table th {
+  padding:10px 8px; font-size:11px; font-weight:700; text-align:center;
+}
+.cmp-table th:first-child { background:var(--cream-dk); color:var(--text-mid); text-align:left; padding-left:12px; }
+.th-g { background:var(--gold); color:var(--brown); }
+.th-b { background:var(--cream-dk); color:var(--text-mid); }
+.cmp-table td {
+  padding:9px 8px; text-align:center;
+  border-bottom:1px solid var(--border-lt);
+  background:#fff;
+}
+.cmp-table td:first-child { text-align:left; padding-left:12px; font-weight:700; background:var(--ivory); }
+.td-g { background:var(--gold-pale); font-weight:700; color:var(--brown-mid); }
+.td-g .bv { font-family:'Shippori Mincho',serif; font-size:16px; font-weight:800; color:var(--gold); }
+.cmp-table tr.note td { font-size:10px; color:var(--text-lt); background:var(--cream-dk) !important; padding:7px 12px; text-align:left; border-bottom:none; }
+
+/* =====================================================
+   POINT 06 噛む力
+===================================================== */
+.doc-box {
+  max-width:var(--W); margin:0 auto;
+  border:2px solid var(--border-lt);
+  background:var(--ivory);
+  display:flex; gap:0; overflow:hidden;
+}
+.doc-photo-col {
+  width:90px; flex-shrink:0;
+  background:linear-gradient(160deg,#3A4C58,#203040);
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  padding:12px 6px; font-size:26px; gap:6px;
+}
+.doc-photo-lbl {
+  font-size:8px; color:rgba(255,255,255,.55);
+  text-align:center; line-height:1.5;
+  border-top:1px solid rgba(255,255,255,.2);
+  padding-top:5px; width:100%;
+}
+.doc-body { flex:1; padding:14px 16px; }
+.doc-lbl { display:inline-block; background:var(--brown); color:#fff; font-size:10px; font-weight:700; padding:3px 10px; margin-bottom:8px; }
+.doc-title {
+  font-family:'Shippori Mincho',serif; font-size:15px; font-weight:700;
+  color:var(--text); line-height:1.6; margin-bottom:8px;
+}
+.doc-text { font-size:12px; color:var(--text-mid); line-height:1.85; }
+.doc-text .r { color:var(--crimson); font-weight:700; }
+.doc-name { font-size:10px; color:var(--text-lt); text-align:right; margin-top:6px; }
+
+/* =====================================================
+   POINT 07 国内製造
+===================================================== */
+.fssc-box {
+  max-width:var(--W); margin:18px auto 0;
+  background:var(--gold-pale);
+  border:1px solid var(--gold);
+  padding:14px 18px;
+  display:flex; gap:12px; align-items:flex-start;
+}
+.fssc-icon { font-size:32px; flex-shrink:0; }
+.fssc-title { font-weight:800; font-size:13px; color:var(--brown); margin-bottom:3px; }
+.fssc-body  { font-size:12px; color:var(--text-mid); line-height:1.8; }
+
+.fac-grid {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:8px; max-width:var(--W); margin:12px auto 0;
+}
+.fchk {
+  background:#fff; border:1px solid var(--border-lt);
+  padding:10px 5px; text-align:center;
+}
+.fchk-i { font-size:20px; margin-bottom:4px; }
+.fchk-l { font-size:10px; font-weight:700; color:var(--text); line-height:1.35; }
+
+/* =====================================================
+   HOW TO EAT
+===================================================== */
+.howto-ph {
+  width:100%; max-width:var(--W); height:180px; margin:0 auto 24px;
+  background:linear-gradient(160deg,#B8A070,#9A8858);
+  display:flex; align-items:center; justify-content:center; font-size:56px;
+  border:2px solid var(--border);
+}
+.howto-steps {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:0; max-width:var(--W); margin:0 auto 20px;
+  border:1px solid var(--border);
+}
+.howto-step {
+  padding:16px 10px; text-align:center;
+  border-right:1px solid var(--border);
+  background:#fff;
+}
+.howto-step:last-child { border-right:none; }
+.step-n {
+  width:28px; height:28px; border-radius:50%;
+  background:var(--brown); color:#fff;
+  font-family:'Shippori Mincho',serif; font-size:13px; font-weight:800;
+  display:flex; align-items:center; justify-content:center;
+  margin:0 auto 8px;
+}
+.step-icon { font-size:24px; margin-bottom:7px; }
+.step-txt {
+  font-family:'Shippori Mincho',serif;
+  font-size:12px; font-weight:600; color:var(--text); line-height:1.6;
+}
+
+.yudesen {
+  max-width:var(--W); margin:0 auto;
+  background:var(--cream-dk);
+  border:1px solid var(--border);
+  padding:14px 18px;
+  display:flex; gap:14px; align-items:center;
+}
+.yud-main { flex:1; }
+.yud-note { font-size:11px; color:var(--text-lt); margin-bottom:4px; }
+.yud-badge {
+  display:inline-block;
+  background:var(--brown);
+  color:#fff; font-family:'Shippori Mincho',serif;
+  font-size:14px; font-weight:700;
+  padding:6px 14px; letter-spacing:.04em;
+}
+.yud-text { font-size:12px; color:var(--text-mid); line-height:1.8; margin-top:5px; }
+.yud-img {
+  width:74px; height:56px; flex-shrink:0;
+  background:linear-gradient(160deg,#6A3818,#4A2010);
+  display:flex; align-items:center; justify-content:center; font-size:24px;
+  border:1px solid var(--border);
+}
+
+/* =====================================================
+   商品一覧
+===================================================== */
+.prod-list { max-width:var(--W); margin:0 auto; }
+.prod-row {
+  display:flex; align-items:center; gap:12px;
+  padding:12px 0;
+  border-bottom:1px solid var(--border-lt);
+  background:#fff;
+}
+.prod-row:first-child { border-top:1px solid var(--border-lt); }
+.prod-thumb {
+  width:68px; height:82px; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  font-size:26px; border:1px solid var(--border-lt);
+  position:relative;
+}
+.pt-1 { background:linear-gradient(155deg,#1C3C10,#2C6018); }
+.pt-2 { background:linear-gradient(155deg,#1A1A2C,#2A2840); }
+.pt-3 { background:linear-gradient(155deg,#2A1A30,#3A2840); }
+.pt-4 { background:linear-gradient(155deg,#3A1A18,#501818); }
+.pt-5 { background:linear-gradient(155deg,#3A2A10,#504018); }
+.pt-6 { background:linear-gradient(155deg,#1A2838,#203040); }
+
+.new-badge {
+  position:absolute; top:-1px; left:-1px;
+  background:var(--crimson); color:#fff;
+  font-size:9px; font-weight:700; padding:2px 6px;
+}
+.prod-name {
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(13px,3.5vw,19px); font-weight:700;
+  color:var(--text); margin-bottom:3px; line-height:1.4;
+}
+.prod-desc { font-size:12px; color:var(--text-mid); line-height:1.65; margin-bottom:4px; }
+.prod-tags { display:flex; gap:4px; flex-wrap:wrap; }
+.p-tag {
+  background:var(--cream-dk); border:1px solid var(--border-lt);
+  color:var(--text-mid); font-size:10px; font-weight:700;
+  padding:2px 8px;
+}
+
+/* =====================================================
+   プレゼント
+===================================================== */
+.present-h {
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(34px,8.5vw,58px); font-weight:800;
+  color:var(--crimson); text-align:center;
+  margin-bottom:20px; letter-spacing:.04em;
+}
+.present-opts {
+  display:flex; align-items:center; justify-content:center;
+  gap:16px; flex-wrap:wrap; margin-bottom:22px;
+}
+.popt {
+  background:#fff; border:2px solid var(--border);
+  padding:14px 18px; min-width:128px; text-align:center;
+}
+.popt.red-bdr { border-color:var(--crimson); }
+.coup-lbl { background:var(--crimson); color:#fff; font-size:11px; font-weight:700; padding:3px 10px; display:inline-block; margin-bottom:7px; letter-spacing:.08em; }
+.coup-num { font-family:'Shippori Mincho',serif; font-size:40px; font-weight:800; color:var(--crimson); line-height:1; }
+.or-circle {
+  width:32px; height:32px; border-radius:50%;
+  background:var(--text); color:#fff;
+  font-size:11px; font-weight:700;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.pack-opt-em { font-size:34px; margin-bottom:4px; }
+.pack-opt-lbl { font-size:12px; font-weight:700; color:var(--text); }
+
+.psteps { display:grid; grid-template-columns:repeat(3,1fr); gap:0; max-width:var(--W); margin:0 auto 16px; border:1px solid var(--border-lt); }
+.pstep { padding:14px 10px; text-align:center; border-right:1px solid var(--border-lt); background:#fff; }
+.pstep:last-child { border-right:none; }
+.pstep-n {
+  width:26px; height:26px; border-radius:50%;
+  background:var(--brown); color:#fff;
+  font-family:'Shippori Mincho',serif; font-size:12px; font-weight:800;
+  display:flex; align-items:center; justify-content:center;
+  margin:0 auto 7px;
+}
+.pstep-t { font-family:'Shippori Mincho',serif; font-size:12px; font-weight:600; color:var(--text); line-height:1.6; }
+.present-notes { font-size:11px; color:var(--text-lt); line-height:1.9; text-align:left; max-width:var(--W); margin:0 auto; }
+
+/* =====================================================
+   CTA
+===================================================== */
+.cta-inner { max-width:var(--W); margin:0 auto; }
+.cta-banner {
+  background:linear-gradient(to right, var(--crimson-dk), var(--crimson), var(--crimson-dk));
+  color:#fff; text-align:center;
+  padding:14px 18px;
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(14px,3.5vw,18px); font-weight:700;
+  letter-spacing:.06em; margin-bottom:22px;
+  border:2px solid rgba(255,255,255,.25);
+  box-shadow:0 3px 12px rgba(194,32,32,.3);
+}
+.price-tbl {
+  width:100%; border-collapse:collapse;
+  border:2px solid var(--border); margin-bottom:24px;
+}
+.price-tbl th {
+  background:var(--brown);
+  color:var(--gold-lt);
+  font-family:'Shippori Mincho',serif;
+  font-size:12px; padding:10px 8px; text-align:center;
+  letter-spacing:.06em;
+}
+.price-tbl td {
+  padding:10px 12px;
+  border-bottom:1px solid var(--border-lt);
+  background:#fff;
+}
+.price-tbl tr:last-child td { border-bottom:none; }
+.price-tbl tr:nth-child(even) td { background:var(--ivory); }
+.price-qty-col { font-size:14px; color:var(--text); font-weight:700; text-align:center; }
+.price-orig-col { font-size:11px; color:var(--text-lt); text-decoration:line-through; text-align:center; }
+.price-sale-col {
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(17px,4.5vw,24px); font-weight:800;
+  color:var(--crimson); text-align:right;
+}
+.price-per-col { font-size:10px; color:var(--text-lt); text-align:right; }
+
+.btn-buy {
+  display:block; width:100%;
+  background:linear-gradient(to bottom, var(--crimson-lt), var(--crimson));
+  color:#fff; text-align:center; text-decoration:none;
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(16px,4.2vw,22px); font-weight:800;
+  padding:18px 20px;
+  letter-spacing:.06em;
+  border:3px solid var(--crimson-dk);
+  box-shadow:0 4px 0 var(--crimson-dk), 0 6px 16px rgba(194,32,32,.35);
+  transition:transform .2s, box-shadow .2s;
+  max-width:var(--W); margin:0 auto;
+}
+.btn-buy:hover { transform:translateY(-3px); box-shadow:0 7px 0 var(--crimson-dk),0 10px 24px rgba(194,32,32,.4); }
+
+/* =====================================================
+   FOOTER
+===================================================== */
+footer {
+  background:var(--brown);
+  border-top:4px solid var(--gold);
+  padding:28px 16px; text-align:center;
+}
+.ft-logo {
+  font-family:'Shippori Mincho',serif;
+  font-size:20px; font-weight:700;
+  color:var(--gold-lt); margin-bottom:8px;
+  letter-spacing:.12em;
+}
+.ft-note { font-size:11px; color:rgba(255,255,255,.35); line-height:1.9; }
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media(max-width:460px){
+  .hero-main { flex-direction:column; }
+  .hero-pack-col { width:100%; min-height:220px; }
+  .hero-text-col { border-left:none; border-top:2px solid var(--border); }
+  .sns-grid { grid-template-columns:1fr; }
+  .sns-right { flex-direction:row; }
+  .howto-steps { grid-template-columns:1fr; }
+  .howto-step { border-right:none; border-bottom:1px solid var(--border); }
+  .howto-step:last-child { border-bottom:none; }
+  .fac-grid { grid-template-columns:repeat(2,1fr); }
+  .psteps { grid-template-columns:1fr; }
+  .pstep { border-right:none; border-bottom:1px solid var(--border-lt); }
+  .pstep:last-child { border-bottom:none; }
+  .present-opts { flex-direction:column; }
+}
+</style>
+</head>
+<body>
+
+<!-- ======================================================
+  01. HERO
+====================================================== -->
+<section class="hero">
+  <div class="hero-top-bar">よい日々ショップ ◇ 楽天市場店</div>
+
+  <div class="hero-main">
+    <!-- 左：商品パック -->
+    <div class="hero-pack-col">
+      <div class="pack-img">
+        <p class="pack-series">KINSHO'S rice modest ICHIZEN</p>
+        <div class="pack-icon">🌾</div>
+        <p class="pack-name">金賞健康玄米<br>発芽玄米</p>
+        <div class="award-seal">
+          <div class="award-seal-txt"><span class="award-seal-big">金賞</span><br>受賞</div>
+        </div>
+      </div>
+      <p class="pack-sub">内容量 120g<br>電子レンジ対応・湯せん対応</p>
+    </div>
+
+    <!-- 右：テキスト -->
+    <div class="hero-text-col">
+      <span class="hero-new-tag">NEW 新登場</span>
+      <h1 class="hero-h1">発芽玄米</h1>
+      <p class="hero-h1-yomi">はつがげんまい</p>
+      <p class="hero-catch">
+        おいしさと栄養の<br>いいところどりをした<br>一膳ご飯
+      </p>
+      <p class="hero-price-hint">12パック〜 ご用意しております</p>
+    </div>
+  </div>
+
+  <!-- 下：食卓ビジュアル -->
+  <div class="hero-food">
+    <div class="hero-food-emo">🍚🥢</div>
+    <div class="hero-food-caption">「おいしさ」と「栄養」のいいところどり</div>
+  </div>
+</section>
+
+
+<!-- ======================================================
+  02. 150万食突破
+====================================================== -->
+<section class="milestone">
+  <div class="ms-wrap">
+    <div class="ms-pack">🌾</div>
+    <div class="ms-text">
+      <p class="ms-sub">\ いつもありがとうございます！ /</p>
+      <div class="ms-num-wrap">
+        <span class="ms-n1">150</span>
+        <span class="ms-n2">万</span>
+      </div>
+      <p class="ms-label">食 突破！</p>
+      <p class="ms-note">※2022年1月1日〜2025年12月31日</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ======================================================
+  コンセプト
+====================================================== -->
+<section class="sec bg-cream">
+  <div class="wrap">
+    <h2 class="sec-h">「おいしさ」と「栄養」の<br>いいところどりをした一膳</h2>
+    <div class="img-box img-wa-frame">
+      <div class="img-ph iph-food">🥣</div>
+    </div>
+    <p class="body-p">
+      栄養価の高い白米『金賞健康米』に発芽玄米をブレンドした健康ご飯パックシリーズ。数え切れないほど食べ比べを行い、おいしく食べることができる割合を見つけ出すことに成功。発芽玄米の独特な風味が苦手な方にも、お試しいただきやすいお味に仕上がりました。<br><br>
+      五つ星お米マイスターにより品質の高いお米を厳選し、創業50年の米飯製造技術で旨味と栄養を損なわず安心・安全にお届けします。
+    </p>
+  </div>
+</section>
+
+<div class="wa-divider" style="background:var(--cream-dk);padding:8px 0;"></div>
+
+
+<!-- ======================================================
+  03. SNSでも話題！
+====================================================== -->
+<section class="sec bg-white">
+  <div class="wrap">
+    <h2 class="sec-h">SNSでも話題！</h2>
+    <div class="sns-grid">
+      <div class="sns-card">
+        <div class="sns-ph s1">🥗</div>
+        <div class="sns-meta"><span class="sns-user">hitomi_kawakami</span><span class="sns-acts">❤️ 💬 🔖</span></div>
+      </div>
+      <div class="sns-right">
+        <div class="sns-card"><div class="sns-ph s2" style="aspect-ratio:1.55;">🍱</div><div class="sns-meta"><span class="sns-user">iroha905</span><span class="sns-acts">❤️ 💬</span></div></div>
+        <div class="sns-card"><div class="sns-ph s3" style="aspect-ratio:1.55;">🍵</div><div class="sns-meta"><span class="sns-user">toshi1427</span><span class="sns-acts">❤️ 💬</span></div></div>
+      </div>
+    </div>
+    <p class="sns-disc">※こちらの投稿は、当社から商品を無償提供した方による投稿です。</p>
+  </div>
+</section>
+
+<div class="wa-divider" style="background:var(--ivory);padding:8px 0;"></div>
+
+
+<!-- ======================================================
+  04. こんなお悩みありませんか
+====================================================== -->
+<section class="sec bg-sakura">
+  <div class="wrap">
+    <span class="trouble-h">こんなお悩みありませんか？</span>
+    <ul class="trouble-list">
+      <li>忙しくても<em>栄養</em>はしっかり摂りたい</li>
+      <li>1人分炊くのは<em>面倒</em>で続かない</li>
+      <li>食事のあと<em>罪悪感</em>が残りやすい</li>
+      <li>いざというときのために<em>備蓄</em>しておきたい</li>
+      <li>ランチ用に<em>持ち運べる</em>ものがほしい</li>
+    </ul>
+    <p class="trouble-ans">金賞の一膳 発芽玄米は、そんなお悩みをまるっと解決します！</p>
+  </div>
+</section>
+
+
+<!-- ======================================================
+  POINT 01 — 金賞健康米
+====================================================== -->
+<section class="pt-sec bg-white">
+  <div class="wrap">
+    <span class="pt-badge"><span class="num">01</span>POINT</span>
+    <h2 class="pt-headline">金賞<span class="red">健康米</span>（白米）</h2>
+    <div class="img-box img-wa-frame"><div class="img-ph iph-field">🌾</div></div>
+    <div class="balloon">
+      <p class="body-p">使用しているお米は<span class="emph">北海道産ゆめぴりか</span>。マグロの養殖で有名な「近畿大学農学部」と共同開発したこだわりの白米です。</p>
+    </div>
+    <div class="expert-row">
+      <div class="ex-photo-col">
+        👨
+        <div class="ex-photo-lbl">五つ星<br>お米マイスター</div>
+      </div>
+      <div class="ex-body">
+        <span class="ex-cert">一般社団法人日本米穀商連合会認定</span>
+        <p class="ex-quote">「<span class="red-u">もっちり感のある仕上がりで、優しい甘さが口いっぱいに広がる</span>」と高く評価していただきました。</p>
+        <p class="ex-name">小野寺 理騎 さん</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wa-divider" style="background:var(--ivory);padding:8px 0;"></div>
+
+
+<!-- ======================================================
+  POINT 02 — ビタミンE残存
+====================================================== -->
+<section class="pt-sec bg-ivory">
+  <div class="wrap">
+    <span class="pt-badge"><span class="num">02</span>POINT</span>
+    <h2 class="pt-headline"><span class="red">ビタミンE</span>が豊富に残存</h2>
+    <div class="img-box img-wa-frame">
+      <div class="img-ph iph-germ" style="position:relative;">
+        🌱
+        <div style="position:absolute;bottom:14px;display:flex;gap:12px;z-index:2;">
+          <div style="background:rgba(28,48,20,.85);border:1px solid rgba(200,160,32,.4);padding:8px 14px;text-align:center;">
+            <p style="font-size:10px;color:rgba(255,255,255,.45)">白米</p>
+            <p style="font-family:'Shippori Mincho',serif;font-size:20px;font-weight:800;color:rgba(255,255,255,.28)">LOW</p>
+          </div>
+          <div style="background:rgba(200,160,32,.2);border:1px solid rgba(200,160,32,.65);padding:8px 14px;text-align:center;">
+            <p style="font-size:10px;color:rgba(255,255,255,.65)">発芽玄米</p>
+            <p style="font-family:'Shippori Mincho',serif;font-size:20px;font-weight:800;color:#F0D060">HIGH</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="body-p c">
+      発芽させることにより<span class="emph">ビタミンEが豊富に残存</span>します。<br>
+      抗酸化作用が期待でき、美容・健康を内側からサポートします。
+    </p>
+  </div>
+</section>
+
+<div class="wa-divider" style="background:var(--cream);padding:8px 0;"></div>
+
+
+<!-- ======================================================
+  POINT 03 — プロが認めた味
+====================================================== -->
+<section class="pt-sec bg-cream">
+  <div class="wrap">
+    <span class="pt-badge"><span class="num">03</span>POINT</span>
+    <h2 class="pt-headline"><span class="gold">プロ</span>が認めた味</h2>
+    <div class="expert-row">
+      <div class="ex-photo-col">
+        👨
+        <div class="ex-photo-lbl">五つ星<br>お米マイスター</div>
+      </div>
+      <div class="ex-body">
+        <span class="ex-cert">一般社団法人日本米穀商連合会認定</span>
+        <p class="ex-quote">「<span class="red-u">もっちり感のある仕上がりで、優しい甘さが口いっぱいに広がる</span>」と評価していただきました。</p>
+        <p class="ex-name">小野寺 理騎 さん</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wa-divider" style="background:var(--ivory);padding:8px 0;"></div>
+
+
+<!-- ======================================================
+  POINT 04 — 古代から愛される発芽玄米
+====================================================== -->
+<section class="pt-sec bg-ivory">
+  <div class="wrap">
+    <span class="pt-badge"><span class="num">04</span>POINT</span>
+    <h2 class="pt-headline">古代から愛される<span class="gold">発芽玄米</span></h2>
+    <div class="img-box img-wa-frame"><div class="img-ph iph-dark">🌾</div></div>
+    <div class="ancient-block">
+      <span class="anc-sublabel">◇ 国産の発芽玄米を贅沢にブレンド ◇</span>
+      <p class="anc-title">国産の発芽玄米を<br>贅沢にブレンド</p>
+      <p class="anc-body">発芽玄米には美容や健康によい栄養成分が豊富に含まれており、古代から現代まで愛され続けている穀物のひとつです。</p>
+      <div class="anc-tags">
+        <span class="anc-tag">GABA</span>
+        <span class="anc-tag">食物繊維</span>
+        <span class="anc-tag">ビタミンE</span>
+        <span class="anc-tag">ビタミンB群</span>
+        <span class="anc-tag">マグネシウム</span>
+        <span class="anc-tag">鉄分</span>
+        <span class="anc-tag">亜鉛</span>
+        <span class="anc-tag">ポリフェノール</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wa-divider" style="background:var(--cream);padding:8px 0;"></div>
+
+
+<!-- ======================================================
+  POINT 05 — 栄養が豊富
+====================================================== -->
+<section class="pt-sec bg-cream">
+  <div class="wrap">
+    <span class="pt-badge"><span class="num">05</span>POINT</span>
+    <h2 class="pt-headline">白米よりも<span class="red">栄養が豊富</span></h2>
+    <div class="img-box img-wa-frame"><div class="img-ph iph-bowl">🥣</div></div>
+
+    <p style="text-align:center;font-size:12px;color:var(--text-lt);margin-bottom:12px;">― 白米と比較して ―</p>
+
+    <div class="nutri-circles">
+      <div class="n-circle"><span class="nm">ビタミンE</span><span class="nv">6</span><span class="nu">倍※2</span></div>
+      <div class="n-circle"><span class="nm">ビタミンB1</span><span class="nv">4</span><span class="nu">倍※2</span></div>
+      <div class="n-circle"><span class="nm">葉酸</span><span class="nv">2</span><span class="nu">倍※2</span></div>
+    </div>
+
+    <table class="cmp-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="th-g">白米と比較</th>
+          <th class="th-b">白米<sup style="font-size:8px;font-weight:400">※1</sup></th>
+          <th class="th-g">本商品<sup style="font-size:8px;font-weight:400">※2</sup></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>マグネシウム</td><td class="td-g"><span class="bv">約4.3倍</span></td><td>12.4mg</td><td class="td-g">54.0mg</td></tr>
+        <tr><td>鉄</td>         <td class="td-g"><span class="bv">約2.2倍</span></td><td>0.4mg</td><td class="td-g">0.9mg</td></tr>
+        <tr><td>ビタミンE</td>  <td class="td-g"><span class="bv">約6.0倍</span></td><td>0.1mg</td><td class="td-g">0.6mg</td></tr>
+        <tr><td>ビタミンB1</td> <td class="td-g"><span class="bv">約4.6倍</span></td><td>0.043mg</td><td class="td-g">0.2mg</td></tr>
+        <tr><td>ビタミンB2</td> <td class="td-g"><span class="bv">約2.3倍</span></td><td>0.011mg</td><td class="td-g">0.026mg</td></tr>
+        <tr><td>葉酸</td>       <td class="td-g"><span class="bv">約2.4倍</span></td><td>6.5μg</td><td class="td-g">15.5μg</td></tr>
+        <tr class="note"><td colspan="4">※1 精白米-うるち米（日本食品成分表（八訂））を本商品と同じ水分量で炊飯した値　※2 1食（120g）あたり</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="wa-divider" style="background:var(--ivory);padding:8px 0;"></div>
+
+
+<!-- ======================================================
+  POINT 06 — 噛む力
+====================================================== -->
+<section class="pt-sec bg-ivory">
+  <div class="wrap">
+    <span class="pt-badge"><span class="num">06</span>POINT</span>
+    <h2 class="pt-headline">"<span class="red">噛む力</span>"が育む健康</h2>
+    <div class="doc-box">
+      <div class="doc-photo-col">
+        👨‍⚕️
+        <div class="doc-photo-lbl">歯医者さんに<br>インタビュー</div>
+      </div>
+      <div class="doc-body">
+        <span class="doc-lbl">歯医者さんにインタビュー</span>
+        <p class="doc-title">白米より噛みごたえがあるため、<br>咀嚼回数が増えます。</p>
+        <p class="doc-text">咀嚼回数が増えると唾液分泌が促進され、<span class="r">満腹感</span>・<span class="r">消化吸収</span>の向上が期待できます。また<span class="r">歯周病予防</span>や<span class="r">免疫力向上</span>にも寄与します。</p>
+        <p class="doc-name">医療法人・正暉会理事長 歯科医師 大西 正開 さん</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wa-divider" style="background:var(--cream);padding:8px 0;"></div>
+
+
+<!-- ======================================================
+  POINT 07 — 安心の国内製造
+====================================================== -->
+<section class="pt-sec bg-cream">
+  <div class="wrap">
+    <span class="pt-badge"><span class="num">07</span>POINT</span>
+    <h2 class="pt-headline">安心の<span class="gold">国内製造</span></h2>
+    <div class="img-box img-wa-frame"><div class="img-ph iph-fac">🏭</div></div>
+    <div class="fssc-box">
+      <div class="fssc-icon">📜</div>
+      <div>
+        <p class="fssc-title">FSSC22000の認証を取得</p>
+        <p class="fssc-body">食品安全マネジメントシステムの国際規格FSSC22000を取得。安心・安全への取り組みをさらに強化しています。</p>
+      </div>
+    </div>
+    <div class="fac-grid">
+      <div class="fchk"><div class="fchk-i">🦠</div><div class="fchk-l">細菌検査</div></div>
+      <div class="fchk"><div class="fchk-i">⚗️</div><div class="fchk-l">pH測定</div></div>
+      <div class="fchk"><div class="fchk-i">🌡️</div><div class="fchk-l">温度測定</div></div>
+      <div class="fchk"><div class="fchk-i">👁️</div><div class="fchk-l">官能検査</div></div>
+      <div class="fchk"><div class="fchk-i">🌾</div><div class="fchk-l">原料検査</div></div>
+      <div class="fchk"><div class="fchk-i">🔥</div><div class="fchk-l">レトルト<br>殺菌</div></div>
+      <div class="fchk"><div class="fchk-i">☢️</div><div class="fchk-l">X線検査</div></div>
+      <div class="fchk"><div class="fchk-i">⚖️</div><div class="fchk-l">ウェイト<br>チェック</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ======================================================
+  HOW TO EAT
+====================================================== -->
+<section class="sec bg-white">
+  <div class="wrap" style="text-align:center;">
+    <div class="rakuten-head" style="margin-bottom:22px;">
+      <span class="rakuten-head-txt">お召し上がり方</span>
+    </div>
+    <div class="howto-ph">🍚</div>
+    <div class="howto-steps">
+      <div class="howto-step">
+        <div class="step-n">1</div>
+        <div class="step-icon">✋</div>
+        <p class="step-txt">フィルムを<br>1/4程はがす</p>
+      </div>
+      <div class="howto-step">
+        <div class="step-n">2</div>
+        <div class="step-icon">📡</div>
+        <p class="step-txt">500W<br>1分20秒温める</p>
+      </div>
+      <div class="howto-step">
+        <div class="step-n">3</div>
+        <div class="step-icon">🥢</div>
+        <p class="step-txt">全体をほぐして<br>完成！</p>
+      </div>
+    </div>
+    <div class="yudesen" style="margin-top:14px;">
+      <div class="yud-main">
+        <p class="yud-note">\ ローリングストックにもおすすめ！ /</p>
+        <span class="yud-badge">湯せん対応 ✅</span>
+        <p class="yud-text">フィルムを開けずに、沸騰したお湯で5分程度温めてください。</p>
+      </div>
+      <div class="yud-img">🍲</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ======================================================
+  商品一覧
+====================================================== -->
+<section class="sec bg-ivory">
+  <div class="wrap">
+    <div class="rakuten-head" style="margin-bottom:22px;">
+      <span class="rakuten-head-txt">商品ラインナップ</span>
+    </div>
+    <p class="body-p c" style="margin-bottom:20px;">
+      金賞の一膳は<span class="gold-t">「気分まで満たされる食事を届けたい」</span><br>そんな想いから生まれたシリーズです。
+    </p>
+    <div class="prod-list">
+      <div class="prod-row">
+        <div class="prod-thumb pt-1">🌾<span class="new-badge">NEW</span></div>
+        <div><p class="prod-name">金賞健康米 × 発芽玄米</p><p class="prod-desc">GABA・食物繊維が豊富。北海道産ゆめぴりかに発芽玄米をブレンド</p><div class="prod-tags"><span class="p-tag">120g</span><span class="p-tag">185kcal</span></div></div>
+      </div>
+      <div class="prod-row">
+        <div class="prod-thumb pt-2">🌑</div>
+        <div><p class="prod-name">金賞健康米 × 黒米・玄米</p><p class="prod-desc">栄養価の高い黒米と新潟産の玄米をブレンド</p><div class="prod-tags"><span class="p-tag">120g</span><span class="p-tag">185kcal</span></div></div>
+      </div>
+      <div class="prod-row">
+        <div class="prod-thumb pt-3">✨</div>
+        <div><p class="prod-name">金賞健康米 × 金のいぶき</p><p class="prod-desc">宮城県産の玄米「金のいぶき」を贅沢にブレンド</p><div class="prod-tags"><span class="p-tag">120g</span><span class="p-tag">184kcal</span></div></div>
+      </div>
+      <div class="prod-row">
+        <div class="prod-thumb pt-4">🌸</div>
+        <div><p class="prod-name">金賞健康米 × キラリモチ</p><p class="prod-desc">もち麦のもちぷち食感が癖になる一膳</p><div class="prod-tags"><span class="p-tag">120g</span><span class="p-tag">192kcal</span></div></div>
+      </div>
+      <div class="prod-row">
+        <div class="prod-thumb pt-5">🌾</div>
+        <div><p class="prod-name">金賞健康米 × 十六雑穀</p><p class="prod-desc">16種類の雑穀を一度に召し上がれます</p><div class="prod-tags"><span class="p-tag">120g</span><span class="p-tag">214kcal</span></div></div>
+      </div>
+      <div class="prod-row">
+        <div class="prod-thumb pt-6">🎊</div>
+        <div><p class="prod-name">金賞健康米 × 赤飯</p><p class="prod-desc">大粒の大納言小豆がホクホクでおいしい赤飯</p><div class="prod-tags"><span class="p-tag">120g</span><span class="p-tag">203kcal</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ======================================================
+  プレゼント特典
+====================================================== -->
+<section class="sec bg-sakura" style="text-align:center;">
+  <div class="wrap">
+    <h2 class="present-h">プレゼント！</h2>
+    <div class="present-opts">
+      <div class="popt red-bdr">
+        <span class="coup-lbl">COUPON</span>
+        <div class="coup-num">5<span style="font-size:20px">%</span>OFF</div>
+      </div>
+      <div class="or-circle">OR</div>
+      <div class="popt">
+        <div class="pack-opt-em">🍱</div>
+        <p class="pack-opt-lbl">お好きな味を1パック</p>
+      </div>
+    </div>
+    <div class="psteps">
+      <div class="pstep"><div class="pstep-n">01</div><p class="pstep-t">注文時に希望の特典を選ぶ</p></div>
+      <div class="pstep"><div class="pstep-n">02</div><p class="pstep-t">到着後1週間以内にレビューを投稿</p></div>
+      <div class="pstep"><div class="pstep-n">03</div><p class="pstep-t">🎁 プレゼントGET！</p></div>
+    </div>
+    <p class="present-notes">
+      ※レビュー記入確認後にプレゼントを手配いたします<br>
+      ※必ず【商品レビュー】をご記入ください<br>
+      ※品物の場合、ご注文者様の住所へお届け。1〜2週間お時間をいただきます<br>
+      ※プレゼントは1回のご注文につき1点まで
+    </p>
+  </div>
+</section>
+
+
+<!-- ======================================================
+  購入 CTA
+====================================================== -->
+<section class="sec bg-brown" id="purchase">
+  <div class="cta-inner">
+    <div class="cta-banner">＼ 10%OFF ＆ ポイント10倍！ ／<br>【金賞の一膳 発芽玄米】</div>
+    <table class="price-tbl">
+      <thead>
+        <tr>
+          <th style="width:28%">数量</th>
+          <th style="width:24%">通常価格</th>
+          <th style="width:28%">特別価格</th>
+          <th style="width:20%">単価</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="price-qty-col">12パック</td>
+          <td class="price-orig-col">3,980円</td>
+          <td class="price-sale-col">3,582円</td>
+          <td class="price-per-col">299円/個</td>
+        </tr>
+        <tr>
+          <td class="price-qty-col">24パック</td>
+          <td class="price-orig-col">7,480円</td>
+          <td class="price-sale-col">6,732円</td>
+          <td class="price-per-col">280円/個</td>
+        </tr>
+        <tr>
+          <td class="price-qty-col">36パック</td>
+          <td class="price-orig-col">11,090円</td>
+          <td class="price-sale-col">9,981円</td>
+          <td class="price-per-col">277円/個</td>
+        </tr>
+        <tr>
+          <td class="price-qty-col">48パック</td>
+          <td class="price-orig-col">14,390円</td>
+          <td class="price-sale-col">12,951円</td>
+          <td class="price-per-col">269円/個</td>
+        </tr>
+        <tr>
+          <td class="price-qty-col">60パック</td>
+          <td class="price-orig-col">17,910円</td>
+          <td class="price-sale-col">16,119円</td>
+          <td class="price-per-col">268円/個</td>
+        </tr>
+      </tbody>
+    </table>
+    <a href="https://item.rakuten.co.jp/florahouse/" class="btn-buy">🛒 楽天市場でご購入はこちら</a>
+  </div>
+</section>
+
+
+<!-- ======================================================
+  FOOTER
+====================================================== -->
+<footer>
+  <p class="ft-logo">金 賞 の 一 膳</p>
+  <p class="ft-note">
+    よい日々ショップ 楽天市場店<br>
+    ※商品パッケージのデザインが変更になる場合がございます。予めご了承ください。<br>
+    ※中身の商品・製法に変更はございません。
+  </p>
+</footer>
+
+</body>
+</html>
